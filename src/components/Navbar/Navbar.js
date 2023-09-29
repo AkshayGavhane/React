@@ -10,7 +10,7 @@ function Navbar() {
   return (
     <div>
       <Box className="navbar">
-        <AppBar position="relative">
+        <AppBar className='appbar' position="relative">
           <IconButton edge="end" aria-label="menu" sx={{ ml: 35 }}>
             <MenuIcon />
           </IconButton>
