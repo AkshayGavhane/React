@@ -11,16 +11,9 @@ function Navbar() {
     <div>
       <Box className="navbar">
         <AppBar position="relative">
-          <Toolbar variant="dense">
-            <IconButton
-              edge="end"
-              
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-          </Toolbar>
+          <IconButton edge="end" aria-label="menu" sx={{ ml: 35 }}>
+            <MenuIcon />
+          </IconButton>
         </AppBar>
       </Box>
     </div>

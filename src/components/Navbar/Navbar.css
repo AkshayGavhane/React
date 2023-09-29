@@ -1,5 +1,3 @@
-.navbar{
-    display: flex;
-    flex-direction: row;
-    align-items: end;
+.custom-toolbar{
+    width: 200px;
 }
