@@ -1,0 +1,35 @@
+.sidebar {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  background-color: #FFFFFF;
+  padding: 1vw;
+}
+
+ul {
+  list-style: none;
+  padding:1px;
+  text-align: center;
+}
+
+li {
+  padding-left: 3%;
+  margin: 10px 3px;
+  font-size: large;
+  transition: background-color 0.3s;
+  margin-bottom: 15%;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: #AC90B9;
+}
+
+.menu{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 10px;
+    color: #8E8989;
+    margin-top: 2rem;
+}
