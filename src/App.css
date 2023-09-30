@@ -1,9 +1,10 @@
-*{
-  top: 0px;
-  margin: 0;
-  box-sizing: content-box;
-}
-.App {
-  text-align: center;
+.app{
+  width: 100vw;
+  height: 100vh;
+  
 }
 
+body{
+  margin: 0;
+  padding: 0;
+}

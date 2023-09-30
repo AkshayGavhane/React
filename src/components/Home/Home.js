@@ -7,8 +7,8 @@ import NavBar from '../NavBar/NavBar';
 function Home() {
   return (
     <>
-      <div className="app">
-        <Sidebar />
+      <div className="home">
+        {/* <Sidebar /> */}
         <NavBar />
        
       </div>
