@@ -1,0 +1,25 @@
+.user-photo {
+    width: 40px; /* Adjust the width as needed */
+    height: 40px; /* Adjust the height as needed */
+    border-radius: 45%;
+    
+  }
+
+.navbar{
+    width: 100%;
+    float: right;
+    height: 4rem;
+    position:relative;
+    flex: 1;
+   
+}
+.menu-icon{
+    margin-left: 10rem;
+}
+
+.item{
+    float: right;
+}
+.name{
+    margin:auto;
+}

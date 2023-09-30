@@ -1,0 +1,9 @@
+body {
+  background-color: beige;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 1rem;
+  
+}

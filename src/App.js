@@ -1,16 +1,14 @@
-
 import './App.css';
+import Body from './components/Body/Body';
 import Home from './components/Home/Home';
-import Navbar from './components/Navbar/Navbar';
-import Sidebar from './components/Sidebar/Sidebar';
-
+import User from './components/Users/User';
 
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      <Home/>
-      {/* <Sidebar/> */}
+      <Home />
+      {/* <User/> */}
+      <Body/>
     </div>
   );
 }
