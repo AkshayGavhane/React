@@ -6,15 +6,19 @@
   }
 
 .navbar{
-    width: 100%;
+    width: 78%;
     float: right;
     height: 4rem;
-    position:relative;
+    position:fixed;
+    top: 0;
+    right: 0;
     flex: 1;
+    background-color: beige;
    
 }
 .menu-icon{
-    margin-left: 10rem;
+    margin-left: 1rem;
+    color: #641CC0;
 }
 
 .item{
