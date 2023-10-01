@@ -1,7 +1,6 @@
 .user {
   flex-grow: 1;
   display: flex;
-  justify-content: ; /* Center horizontally */
   align-items: flex-start; /* Center vertically */
   margin-top: 5rem;
   margin-left: 15rem;
