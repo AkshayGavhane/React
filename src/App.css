@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column; /* Stack sidebar, navbar, and content vertically */
   height: 100vh; 
+  background-color: #C8CCCA;
 }
 
 body {

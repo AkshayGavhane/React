@@ -1,0 +1,43 @@
+.card {
+  margin: 1%;
+  padding: 3%;
+  width: 30%;
+  height: 8%;
+  box-shadow: 0 0 28px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  
+}
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card_title {
+  font-weight: 500;
+  font-size: small;
+  justify-items: center;
+  overflow: hidden;
+}
+
+.card_body {
+  display: flex;
+}
+
+.card_body p {
+  font-size: 1vw;
+  margin-top: 3%;
+  padding: 3%;
+}
+.card_image img {
+  border-radius: 40%;
+  justify-items: center;
+}
+
+.email {
+  display: grid;
+  justify-content: end;
+  font-size: 40%;
+  font-weight: 100;
+}
