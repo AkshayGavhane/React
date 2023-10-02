@@ -1,14 +1,15 @@
-import React from 'react';
-import './Home.css';
+import React from "react";
+import User from "./../Users/User";
+import NavBar from "../NavBar/NavBar";
+import Sidebar from "../Sidebar/Sidebar";
 
 function Home() {
   return (
-    <div className='home'>
-        <h1>Home</h1>
-        <h1>Dashboard</h1>
-        <h1>About Us</h1>
+    <div>
+      <Sidebar />
+      <NavBar />
     </div>
-  )
+  );
 }
 
 export default Home;

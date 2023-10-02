@@ -1,16 +1,14 @@
-.App {
-  text-align: center;
-  
+.app {
+  width: 100vw;
+  display: flex;
+  flex-direction: column; /* Stack sidebar, navbar, and content vertically */
+  height: 100vh; 
+  background-color: #C8CCCA;
 }
 
-/* App.css */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
 }
 
-.content {
-  margin-left: 250px; /* Width of the sidebar */
-  padding: 20px;
-}
+

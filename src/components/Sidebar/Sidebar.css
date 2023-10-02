@@ -1,35 +1,48 @@
 .sidebar {
-  width: 250px;
-  height: 100%;
+  height: 100vh;
+  width: 22%;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
   position: fixed;
-  top: 0;
-  bottom: 0;
-  background-color: #FFFFFF;
-  padding: 1vw;
+  
 }
 
-ul {
-  list-style: none;
-  padding:1px;
-  text-align: center;
+.SidebarList {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  background-color: white;
 }
 
-li {
-  padding-left: 3%;
-  margin: 10px 3px;
-  font-size: large;
-  transition: background-color 0.3s;
-  margin-bottom: 15%;
+.SidebarList #active {
+  background-color: #efe8f8;
+}
+.flex-container {
+  width: 232px;
+  height: 50px;
+  display: flex;
+
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-li:hover {
+.flex-container:hover {
   cursor: pointer;
-  background-color: #AC90B9;
+  background-color: #efe8f8;
+}
+.row #icon {
+  flex: 20%;
+  display: grid;
+  place-items: center;
+}
+.row #title {
+  flex: 80%;
 }
 
-.menu{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 10px;
-    color: #8E8989;
-    margin-top: 2rem;
+.img {
+  height: 8rem;
+  width: 100%;
 }

@@ -1,0 +1,28 @@
+body{
+  background-color: #C8CCCA;
+  position: relative;
+}
+.user {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  margin-top: 5rem;
+  margin-left: 15rem;
+}
+.btn {
+  margin-left: auto;
+
+  right: 2rem;
+}
+#button {
+  background-color: #641cc0;
+  color: white;
+}
+
+.cards{
+
+  flex-grow: 1;
+  margin-top: 5rem;
+  margin-left: 15rem;
+}
+
