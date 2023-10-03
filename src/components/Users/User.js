@@ -8,8 +8,7 @@ import UserCard from "../UserCard/UserCard";
 function User() {
   return (
     <>
-      <Sidebar />
-      <NavBar />
+      
       <div className="user">
         <h4>Users</h4>
         <div className="btn">
