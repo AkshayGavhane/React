@@ -15,7 +15,7 @@ function UserCard() {
   }, []);
 
   return(
-    <div className="card-container">
+    <div className="">
         {users.map((user,index) => (
             <SocialCard userData={user} key={index}/>
         ))}
