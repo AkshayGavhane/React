@@ -15,19 +15,21 @@ function User() {
         }}
       >
         <div className=" mt-40 flex ">
-          <div className="ml-72">
+          <div className="ml-80">
             <Typography variant="h6">Users</Typography>
           </div>
-          <div className="ml-auto rounded-3xl mr-20 bg-indigo-500">
+          <div className="ml-auto mr-16">
             <Button variant="contained" size="medium">
-              Add New User
+             <AddIcon/>
+             Add New User
             </Button>
           </div>
         </div>
+
+        <div className="mt-2">
+          <UserCard />
+        </div>
       </Box>
-      <div className="cards">
-        <UserCard />
-      </div>
     </>
   );
 }

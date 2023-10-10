@@ -15,7 +15,7 @@ function UserCard() {
   }, []);
 
   return(
-    <div className="">
+    <div className="flex flex-wrap w-auto ml-80 h-auto">
         {users.map((user,index) => (
             <SocialCard userData={user} key={index}/>
         ))}

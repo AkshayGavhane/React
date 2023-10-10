@@ -3,7 +3,7 @@ import "./SocialCard.css";
 function SocialCard({ userData }) {
   return (
     <div className="card">
-      <div className="card_title">
+      <div className="text-base font-sans font-light">
         {userData.name.first}&nbsp;
         {userData.name.last}
       </div>

@@ -11,8 +11,8 @@ import { Box } from '@mui/material';
 function App() {
   return (
     <Box className="app">
-      {/* <Sidebar />
-      <NavBar /> */}
+      {/* <Sidebar /> */}
+      <NavBar />
       <Routes>
         <Route path="" element={<Home></Home>}></Route>
         <Route path="/users" element={<User></User>}></Route>
