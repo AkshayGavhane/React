@@ -1,9 +1,8 @@
 import React from 'react';
-import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import userImage from '../../profile.png';
 import './NavBar.css';
 import MenuIcon from '@mui/icons-material/Menu';
-import { AppBar, Box, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, Box, IconButton, Toolbar } from '@mui/material';
 
 function NavBar() {
   return (

@@ -80,10 +80,8 @@ function EditUser() {
         <div>
           <TextField id="outlined" label="Confirm Password" fullWidth />
         </div>
-        <div className="mb-20">
-          <Button className="space-y-5 " variant="contained">
-            Save
-          </Button>
+        <div>
+          <Button variant="contained">Save</Button>
         </div>
       </form>
     </Box>

@@ -20,48 +20,52 @@ function User() {
     setShowUserCard(true);
     setShowUserList(false);
   };
-  
-  return (
-    <>
-      <Box
-        sx={{
-          height: '100vh',
-          width: '100%',
-        }}
-      >
-        <div className=" mt-16 flex ">
-          <div className="ml-80 ">
-            <Typography variant="h6">Users</Typography>
-          </div>
-          <div className="flex ml-auto mr-16">
-            <div className="cursor-pointer mx-3">
-              <FormatListBulletedIcon
-                fontSize="large"
-                onClick={handleUserList}
-              />
 
-              <AppsIcon fontSize="large" onClick={handleUserCard} />
-            </div>
+  return (
+    <Box
+      sx={{
+        height: '100vh',
+        width: '100%',
+      }}
+    >
+      <div className=" mt-16 flex ">
+        <div className="ml-80 ">
+          <Typography variant="h5" className='mt-1'>Users</Typography>
+        </div>
+        <div className="flex ml-auto mr-16">
+          <div className="cursor-pointer mx-3">
+            <FormatListBulletedIcon
+              fontSize="large"
+              onClick={handleUserList}
+              className="hover:text-violet-700  hover:bg-slate-200"
+            />
+
+            <AppsIcon
+              fontSize="large"
+              onClick={handleUserCard}
+              className="hover:text-violet-700  hover:bg-slate-200"
+            />
+          </div>
+          <div className="bg-violet-700 rounded-3xl hover:bg-violet-600">
             <Button
-              variant="contained"
               size="medium"
               onClick={() => {
                 window.location.pathname = '/users/adduser';
               }}
             >
-              <AddIcon />
-              Add New User
+              <AddIcon className="text-white" />
+              <p className="text-white font-semibold"> Add New User</p>
             </Button>
           </div>
         </div>
+      </div>
 
-        <div className="mt-3">
-          <div className="mr-16">{showUserList && <UserList />}</div>
-          <div className="mr-3">{showUserCard && <UserCard />}</div>
-          {/* <div className="ml-32">{user && <AddUserForm />}</div> */}
-        </div>
-      </Box>
-    </>
+      <div className="mt-3">
+        <div className="mr-16">{showUserList && <UserList />}</div>
+        <div className="mr-3">{showUserCard && <UserCard />}</div>
+        {/* <div className="ml-32">{user && <AddUserForm />}</div> */}
+      </div>
+    </Box>
   );
 }
 

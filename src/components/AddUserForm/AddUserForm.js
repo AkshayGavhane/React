@@ -4,6 +4,12 @@ import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
 function AddUserForm() {
   const [role, setRole] = useState([]);
   const [status, setStatus] = useState([]);
+  // const firstNameInput = useRef();
+  // const lastNameInput = useRef();
+  // const emailInput = useRef();
+  // const phoneInput = useRef();
+  // const passwordInput = useRef();
+  // const passwordConfirmationInput = useRef();
 
   const handleRoleChange = (e) => {
     setRole(e.target.value);
@@ -38,7 +44,7 @@ function AddUserForm() {
           <TextField id="outlined" label="Email" fullWidth />
         </div>
         <div>
-          <TextField id="outlined" label="Phone" fullWidth  type='number'/>
+          <TextField id="outlined" label="Phone" fullWidth type="number" />
         </div>
         <div>
           <TextField

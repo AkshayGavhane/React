@@ -12,6 +12,8 @@ const UserList = () => {
       setUsersList(res.data.data.rows);
     });
   }, []);
+  // const count = usersList.length;
+  // console.log('count:', count);
 
   const columns = [
     {
