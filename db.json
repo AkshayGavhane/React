@@ -255,6 +255,16 @@
       "password": "123",
       "role": "Admin",
       "status": "Active",
+      "id": 21
+    },
+    {
+      "firstName": "Yashraj",
+      "lastName": "G",
+      "email": "yash@gmail.com",
+      "phone": "918989898989",
+      "password": "1234",
+      "role": "Admin",
+      "status": "Active", 
       "id": 22
     }
   ]
