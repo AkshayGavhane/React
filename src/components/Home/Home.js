@@ -7,27 +7,29 @@ function Home() {
   const [usersList, setUsersList] = useState([]);
   const [activeUsers, setActiveUsers] = useState([]);
   const [inactiveUsers, setInactiveUsers] = useState([]);
+  const [count, setCount] = useState(0);
   useEffect(() => {
-    axios.get('../data.json').then((res) => {
-      setUsersList(res.data.data.rows);
-      const activeCount = usersList.filter((user) => user.status === 'Active');
-      setActiveUsers(activeCount.length);
-      const inactiveCount = usersList.filter(
-        (user) => user.status === 'Inactive'
-      );
-      setInactiveUsers(inactiveCount.length);
-    });
-  }, [usersList]);
-
-  const count = usersList.length;
-
+    fetch('http://localhost:8888/data')
+      .then((res) => res.json())
+      .then((resp) => {
+        setUsersList(resp);
+        setCount(resp.length);
+        const activeCount = resp.filter((user) => user.status === 'Active');
+        setActiveUsers(activeCount.length);
+        const inactiveCount = resp.filter((user) => user.status === 'Inactive');
+        setInactiveUsers(inactiveCount.length);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
   return (
     <Box className="flex ml-32">
       <Card className="w-56 h-32 ml-64 my-20 shadow">
         <CardContent className="flex space-x-4">
           <div>
             <Typography variant="h6">Total Users </Typography>
-            <div className="text-3xl my-3 ml-12">{count}</div>
+            <div className="text-3xl my-3 ml-12">{count} </div>
           </div>
           <div>
             <PeopleAltOutlinedIcon

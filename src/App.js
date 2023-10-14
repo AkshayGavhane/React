@@ -19,7 +19,10 @@ function App() {
         <Route path="" element={<Home></Home>}></Route>
         <Route path="/users" element={<User></User>}></Route>
         <Route path="/dashboard" element={<Home></Home>}></Route>
-        <Route path="users/edituser" element={<EditUser></EditUser>}></Route>
+        <Route
+          path="users/edituser/:id"
+          element={<EditUser></EditUser>}
+        ></Route>
         <Route
           path="/users/adduser"
           element={<AddUserForm></AddUserForm>}

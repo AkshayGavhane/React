@@ -30,7 +30,9 @@ function User() {
     >
       <div className=" mt-16 flex ">
         <div className="ml-80 ">
-          <Typography variant="h5" className='mt-1'>Users</Typography>
+          <Typography variant="h5" className="mt-1">
+            Users
+          </Typography>
         </div>
         <div className="flex ml-auto mr-16">
           <div className="cursor-pointer mx-3">
@@ -46,7 +48,7 @@ function User() {
               className="hover:text-violet-700  hover:bg-slate-200"
             />
           </div>
-          <div className="bg-violet-700 rounded-3xl hover:bg-violet-600">
+          <div className="bg-violet-700 rounded-3xl hover:bg-violet-600 shadow">
             <Button
               size="medium"
               onClick={() => {

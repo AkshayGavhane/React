@@ -1,20 +1,44 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
-import { Avatar, Box } from '@mui/material';
+import { Alert, Avatar, Box, Snackbar } from '@mui/material';
 import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import { useNavigate } from 'react-router-dom';
 
 const UserList = () => {
   const [usersList, setUsersList] = useState([]);
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
-    axios.get('../data.json').then((res) => {
-      setUsersList(res.data.data.rows);
-    });
-  }, []);
-  // const count = usersList.length;
-  // console.log('count:', count);
+    fetch('http://localhost:8888/data')
+      .then((res) => {
+        //setUsersCard(res.data.rows);
+        return res.json();
+      })
+      .then((resp) => {
+        console.log(resp);
 
+        setUsersList(resp);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  const handleEditChange = (id) => {
+    navigate('/users/edituser/' + id);
+  };
+
+  const handleDeleteChange = (id) => {
+    if (window.confirm('Do you want to delete User?')) {
+      fetch('http://localhost:8888/data/' + id, {
+        method: 'DELETE',
+      }).then((res) => {
+        alert('Deleted Successfully!');
+        window.location.reload();
+      });
+    }
+  };
   const columns = [
     {
       field: 'id',
@@ -27,7 +51,7 @@ const UserList = () => {
     {
       field: 'name',
       headerName: 'Name',
-      width: 150,
+      width: 180,
       renderCell: (params) => {
         return (
           <div className="flex space-x-2">
@@ -92,12 +116,17 @@ const UserList = () => {
               <ModeEditOutlineOutlinedIcon
                 className="cursor-pointer"
                 onClick={() => {
-                  window.location.pathname = 'users/edituser';
+                  handleEditChange(params.row.id);
                 }}
               />
             </div>
             <div>
-              <DeleteOutlineOutlinedIcon className="cursor-pointer" />
+              <DeleteOutlineOutlinedIcon
+                className="cursor-pointer"
+                onClick={() => {
+                  handleDeleteChange(params.row.id);
+                }}
+              />
             </div>
           </div>
         );
